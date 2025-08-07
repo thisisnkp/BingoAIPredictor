@@ -1,5 +1,11 @@
 # WinGo Color Prediction Chrome Extension
 
+## ❤️ Support this project
+
+If you find this project helpful, consider supporting it:
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/ncp/payment/DFEE788YZA9W8)
+
 ## 📋 Installation Guide
 
 ### Step 1: Download Files

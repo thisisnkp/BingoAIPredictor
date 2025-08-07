@@ -1,10 +1,17 @@
-# WinGo Color Prediction Chrome Extension
+# WinGo Color Prediction Chrome Extension For Damangame
 
 ## ❤️ Support this project
 
 If you find this project helpful, consider supporting it:
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/ncp/payment/DFEE788YZA9W8)
+
+## 🎁 Get Free Damangame Account & Support
+
+Join using the links below:
+
+- 🔗 [Register for Damangame (Free Account & Invitation)](https://damangames5.com/#/register?invitationCode=4222618076107)
+- 💬 [Join Our Telegram Support Group](https://t.me/+HG8NU9aWaoBiMjhl)
 
 ## 📋 Installation Guide
 

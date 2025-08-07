@@ -1,0 +1,370 @@
+/* Enhanced styling for WinGo Predictor */
+
+/* Color-specific prediction values */
+#predictedColor.red {
+    color: #dc3545 !important;
+    text-shadow: 0 0 10px rgba(220, 53, 69, 0.3);
+}
+
+#predictedColor.green {
+    color: #198754 !important;
+    text-shadow: 0 0 10px rgba(25, 135, 84, 0.3);
+}
+
+#predictedColor.violet {
+    color: #6f42c1 !important;
+    text-shadow: 0 0 10px rgba(111, 66, 193, 0.3);
+}
+
+/* Size-specific prediction values */
+#predictedSize.big {
+    color: #fd7e14 !important;
+    text-shadow: 0 0 10px rgba(253, 126, 20, 0.3);
+}
+
+#predictedSize.small {
+    color: #0dcaf0 !important;
+    text-shadow: 0 0 10px rgba(13, 202, 240, 0.3);
+}
+
+/* Number prediction styling */
+#predictedNumber {
+    color: #495057 !important;
+    font-weight: 900 !important;
+    text-shadow: 0 0 10px rgba(73, 80, 87, 0.2);
+}
+
+/* Enhanced prediction cards */
+.prediction-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef) !important;
+}
+
+.prediction-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.prediction-result.prediction-thinking .prediction-card {
+    animation: thinking 1.5s infinite;
+}
+
+@keyframes thinking {
+    0%, 100% { 
+        border-color: transparent;
+        transform: scale(1);
+    }
+    50% { 
+        border-color: #007bff;
+        transform: scale(1.02);
+    }
+}
+
+/* Enhanced history styling */
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item:hover {
+    background: linear-gradient(90deg, #f8f9fa, #e9ecef);
+    transform: translateX(3px);
+}
+
+.history-period {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: #6c757d;
+    background: linear-gradient(45deg, #e9ecef, #dee2e6);
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+.history-result {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.color-dot:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.color-dot.red {
+    background: linear-gradient(145deg, #dc3545, #c82333);
+}
+
+.color-dot.green {
+    background: linear-gradient(145deg, #198754, #157347);
+}
+
+.color-dot.violet {
+    background: linear-gradient(145deg, #6f42c1, #5c359a);
+}
+
+.size-badge {
+    background: linear-gradient(145deg, #e9ecef, #dee2e6);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border: 1px solid #ced4da;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.size-badge.big {
+    background: linear-gradient(145deg, #fff3cd, #ffeaa7);
+    color: #664d03;
+    border: 1px solid #f0d982;
+}
+
+.size-badge.small {
+    background: linear-gradient(145deg, #cff4fc, #86d3e0);
+    color: #055160;
+    border: 1px solid #7dd3fc;
+}
+
+/* Enhanced statistics cards */
+.stats-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef) !important;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    border-color: #007bff;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.1);
+}
+
+/* Time warning animations */
+.time-warning {
+    animation: pulse-warning 1s infinite;
+    color: #fd7e14 !important;
+    font-weight: bold;
+}
+
+.time-critical {
+    animation: pulse-critical 0.5s infinite;
+    color: #dc3545 !important;
+    font-weight: bold;
+}
+
+@keyframes pulse-warning {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@keyframes pulse-critical {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1);
+        text-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+    }
+    50% { 
+        opacity: 0.6; 
+        transform: scale(1.1);
+        text-shadow: 0 0 10px rgba(220, 53, 69, 0.8);
+    }
+}
+
+/* Auto prediction status */
+.auto-prediction-active {
+    position: relative;
+    color: #198754 !important;
+}
+
+.auto-prediction-active::after {
+    content: "●";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    color: #198754;
+    font-size: 14px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+/* Auto status indicator */
+#autoStatus {
+    background: linear-gradient(145deg, #d1e7dd, #badbcc) !important;
+    border: 1px solid #a3d2bb;
+    color: #0f5132 !important;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(25, 135, 84, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(25, 135, 84, 0.5); }
+}
+
+/* Prediction loading animation */
+.prediction-loading {
+    position: relative;
+    opacity: 0.8;
+}
+
+.prediction-loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 123, 255, 0.1), 
+        transparent
+    );
+    animation: shimmer 2s infinite;
+    border-radius: 8px;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Enhanced confidence bar */
+.progress {
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.progress-bar {
+    border-radius: 8px;
+    transition: width 1s ease-in-out;
+}
+
+/* Scrollbar styling */
+.history-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.history-container::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #f1f3f4, #e8eaed);
+    border-radius: 4px;
+}
+
+.history-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #aaa, #888);
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+.history-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #999, #555);
+}
+
+/* Card hover effects */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Button enhancements */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Prediction reasoning styling */
+#predictionReasoning {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Status message styling */
+#status {
+    transition: all 0.3s ease;
+}
+
+#status.status-success {
+    background: linear-gradient(145deg, #d1e7dd, #badbcc);
+    border: 1px solid #a3d2bb;
+    color: #0f5132;
+}
+
+#status.status-error {
+    background: linear-gradient(145deg, #f8d7da, #f1aeb5);
+    border: 1px solid #e85e6c;
+    color: #721c24;
+}
+
+#status.status-info {
+    background: linear-gradient(145deg, #cff4fc, #86d3e0);
+    border: 1px solid #7dd3fc;
+    color: #055160;
+}
+
+#status.status-warning {
+    background: linear-gradient(145deg, #fff3cd, #ffeaa7);
+    border: 1px solid #f0d982;
+    color: #664d03;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .container-fluid {
+        width: 350px !important;
+    }
+    
+    .prediction-card {
+        padding: 0.5rem !important;
+    }
+    
+    .stats-card {
+        padding: 0.5rem !important;
+    }
+}
+
+/* Special effects for high confidence predictions */
+.high-confidence .prediction-card {
+    background: linear-gradient(145deg, #f0f9f0, #e8f5e8) !important;
+    border-color: #198754 !important;
+    animation: confidence-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes confidence-glow {
+    0% { box-shadow: 0 0 10px rgba(25, 135, 84, 0.2); }
+    100% { box-shadow: 0 0 20px rgba(25, 135, 84, 0.4); }
+}
